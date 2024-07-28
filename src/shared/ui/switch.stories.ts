@@ -56,6 +56,6 @@ export const WithLabelDisabled: Story = {
     args: {
         isSelected: true,
         isDisabled: true,
-        children: "Disabled"
+        children: 'Disabled'
     }
-};
+}

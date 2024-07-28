@@ -10,7 +10,8 @@
     "format": "prettier --write ./src",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_5be45ddb7982193"
   },
   "dependencies": {
     "framer-motion": "^11.3.19",

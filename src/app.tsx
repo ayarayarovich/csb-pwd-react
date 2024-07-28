@@ -1,10 +1,12 @@
-import Switch from "./shared/ui/switch";
+import Switch from './shared/ui/switch'
 
 export default function App() {
     return (
         <>
             <div>privet</div>
-            <div><Switch /></div>
+            <div>
+                <Switch />
+            </div>
         </>
     )
 }
