@@ -11,7 +11,7 @@ module.exports = {
         'prettier',
         'plugin:storybook/recommended'
     ],
-    ignorePatterns: ['dist', '.eslintrc.cjs', 'tailwind.config.js'],
+    ignorePatterns: ['node_modules', 'public', 'dist', '.eslintrc.cjs', 'tailwind.config.js'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
