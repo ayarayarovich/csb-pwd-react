@@ -15,6 +15,10 @@ export default {
             red: '#FE2F2F',
             green: '#1DC9A0'
         },
+        fontFamily: {
+            inter: '"Inter", sans-serif',
+            montserrat: '"Montserrat", sans-serif'
+        },
         extend: {}
     },
     plugins: []
