@@ -1,3 +1,9 @@
+const plugin = require('tailwindcss/plugin')
+
+const hocusPlugin = plugin(function ({ addVariant }) {
+    addVariant('hocus', ['&:hover', '&:focus'])
+})
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -21,5 +27,5 @@ export default {
         },
         extend: {}
     },
-    plugins: []
+    plugins: [hocusPlugin]
 }
