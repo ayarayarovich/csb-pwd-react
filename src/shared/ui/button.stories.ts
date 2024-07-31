@@ -2,12 +2,14 @@ import '@/index.css'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-import Switch from './switch'
+import Button from './button'
+
+const component = Button
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-    title: 'UI/Switch',
-    component: Switch,
+    title: 'UI/Button',
+    component,
     parameters: {
         // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
         layout: 'centered'
@@ -17,35 +19,36 @@ const meta = {
     // More on argTypes: https://storybook.js.org/docs/api/argtypes
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     // args: { onKeyDown: fn() }
-} satisfies Meta<typeof Switch>
+} satisfies Meta<typeof component>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Default: Story = {}
+export const Default: Story = {
+    args: {
+        children: 'Привет'
+    }
+}
 
 export const Disabled: Story = {
     args: {
+        children: 'Привет',
         isDisabled: true
     }
 }
 
-export const Selected: Story = {
+export const White: Story = {
     args: {
-        isSelected: true
+        children: 'Привет',
+        variant: 'white'
     }
 }
 
-export const WithLabel: Story = {
+export const DisabledWhite: Story = {
     args: {
-        children: 'Label'
-    }
-}
-
-export const WithLabelDisabled: Story = {
-    args: {
+        variant: 'white',
         isDisabled: true,
-        children: 'Disabled'
+        children: 'Привет'
     }
 }
