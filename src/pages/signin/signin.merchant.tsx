@@ -1,10 +1,16 @@
-import { Link, ScrollRestoration } from 'react-router-dom'
+import { useCallback } from 'react'
+import { Link, ScrollRestoration, useNavigate } from 'react-router-dom'
 
 import Icon from '@/shared/icon'
 import Button from '@/shared/ui/button'
 import TextField from '@/shared/ui/text-field'
 
 export default function SignInMerchant() {
+    const navigate = useNavigate()
+    const signIn = useCallback(() => {
+        navigate('/dashboard')
+    }, [navigate])
+
     return (
         <div className='max-w-md w-full flex flex-col gap-8'>
             <ScrollRestoration />
@@ -22,7 +28,7 @@ export default function SignInMerchant() {
                 <TextField label='Пароль' type='password' />
             </div>
             <div className='flex flex-col items-stretch gap-3'>
-                <Button>Войти</Button>
+                <Button onPress={signIn}>Войти</Button>
                 <Link
                     className='text-blue self-center font-montserrat text-lg text-center'
                     to='/signin/password-reset'>

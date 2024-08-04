@@ -2,6 +2,11 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import Index from '@/pages/index'
 
+import Dashboard from './pages/dashboard/dashboard'
+import DashboardCards from './pages/dashboard/dashboard.cards'
+import DashboardHistory from './pages/dashboard/dashboard.history'
+import DashboardSupport from './pages/dashboard/dashboard.support'
+import DashboardLayout from './pages/dashboard/layout'
 import SignInLayout from './pages/signin/layout'
 import SignIn from './pages/signin/signin'
 import SignInMerchant from './pages/signin/signin.merchant'
@@ -32,6 +37,28 @@ export const router = createBrowserRouter([
                     {
                         path: 'password-reset',
                         element: <SignInPasswordReset />
+                    }
+                ]
+            },
+            {
+                path: 'dashboard',
+                element: <DashboardLayout />,
+                children: [
+                    {
+                        path: '',
+                        element: <Dashboard />
+                    },
+                    {
+                        path: 'history',
+                        element: <DashboardHistory />
+                    },
+                    {
+                        path: 'cards',
+                        element: <DashboardCards />
+                    },
+                    {
+                        path: 'support',
+                        element: <DashboardSupport />
                     }
                 ]
             }

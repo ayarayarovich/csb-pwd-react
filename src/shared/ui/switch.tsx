@@ -11,7 +11,7 @@ export default function Switch(props: AriaSwitchProps) {
     const { isFocusVisible, focusProps } = useFocusRing()
 
     return (
-        <label className='flex items-center cursor-pointer group gap-3.5'>
+        <label className='flex items-center cursor-pointer group gap-3.5 select-none'>
             <VisuallyHidden>
                 <input {...inputProps} {...focusProps} ref={ref} />
             </VisuallyHidden>

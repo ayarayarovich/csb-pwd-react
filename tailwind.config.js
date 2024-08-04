@@ -25,7 +25,11 @@ export default {
             inter: '"Inter", sans-serif',
             montserrat: '"Montserrat", sans-serif'
         },
-        extend: {}
+        extend: {
+            spacing: {
+                50: '12.5rem'
+            }
+        }
     },
     plugins: [hocusPlugin]
 }

@@ -7,5 +7,8 @@ export default defineConfig({
     server: {
         port: 7788
     },
+    preview: {
+        port: 7789
+    },
     plugins: [react(), tsconfigPaths()]
 })
